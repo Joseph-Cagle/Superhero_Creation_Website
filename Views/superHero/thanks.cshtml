@@ -1,0 +1,60 @@
+﻿@model heroInfo;
+@{
+    ViewData["Title"] = "Thanks";
+}
+
+
+
+
+
+    <h1>Thank you for taking the time to make a hero!</h1>
+   
+    <div></div>
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h2>Hero Name</h2>
+                <p> @Model.name </p>
+            </div>
+            <div class="col">
+                <h2>Hero Origin</h2>
+                <p>@Model.origin</p>
+            </div>
+            <div class="col">
+                <h2>Date Of Birth</h2>
+                <p> @Model.dob</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <h2>First Power</h2>
+                <p> @Model.power1</p>
+            </div>
+            <div class="col">
+                <h2>Second Power</h2>
+                <p> @Model.power2</p>
+            </div>
+            <div class="col">
+                <h2>Weakness</h2>
+                <p> @Model.weaknes</p>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

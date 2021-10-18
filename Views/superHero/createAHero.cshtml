@@ -1,0 +1,61 @@
+﻿@model heroInfo;
+@{
+    ViewData["Title"] = "create a hero";
+}
+
+<h1> Welcome aspiring future heros! </h1>
+<h2>Fill out our form below to create your own hero</h2>
+
+<form name="DesktopOrder" method="post" asp-action="createAHero">
+    <div class="alert-danger" asp-validation-summary="All"></div>
+    <div class="form-group">
+
+    </div>
+    
+    <div class="form-group">
+        <label asp-for="name">Hero's name</label>
+        <input asp-for="name" class="form-control" placeholder="Enter Hero Name " />
+    </div>
+    <div class="form-group">
+        <label asp-for="origin">Place Of Orgin</label>
+        <input asp-for="origin" class="form-control" placeholder="Your heros place of origin here " />
+    </div>
+    <div class="form-group">
+        <label asp-for="dob">click below to select Date Of Birth</label>
+
+        <input asp-for="dob" class="form-control" placeholder="Your heros date of birth here " />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="power1">Pick your first power!</label>
+        <select asp-for="power1" class="form-control">
+
+            @foreach (var comp in ViewBag.powers1)
+            {
+                <option value="@comp.Value">@comp.Text</option>
+            }
+        </select>
+    </div>
+    <div class="form-group">
+        <label asp-for="power2">Pick your second power!</label>
+        <select asp-for="power2" class="form-control">
+
+            @foreach (var comp in ViewBag.powers2)
+            {
+                <option value="@comp.Value">@comp.Text</option>
+            }
+        </select>
+    </div>
+    <div class="form-group">
+        <label asp-for="weaknes">Pick your weakness!</label>
+        <select asp-for="weaknes" class="form-control">
+
+            @foreach (var comp in ViewBag.weakness)
+            {
+                <option value="@comp.Value">@comp.Text</option>
+            }
+        </select>
+    </div>
+
+    <button type="submit" class="btn btn-success">Create!</button>
+</form>
